@@ -1,0 +1,9 @@
+1.该包依赖django, django1.11已经包含在base/site-packages, 无需重新安装
+2.在使用(引入)django的model.Model之前必须先引入orm.setup.setup_django_orm,并通过setup_django_orm安装使用Model的Apps
+    from orm.setup import setup_django_orm
+    setup_django_orm('your_app_names')
+
+3.在orm.djang_seteting中设置好DATABASE项
+4.数据库路由(orm.router), 通过Model中app_label项与DATABASE中数据库别名建立连接
+
+详细使用方法请见tests/main.py

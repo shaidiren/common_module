@@ -1,0 +1,5 @@
+1.依赖：redis-server, rabbitmq-server
+yum install redis-server, rabbitmq-server
+1.安装：
+sudo pip install "celery[librabbitmq,redis,msgpack]"
+2.使用方法见tests/test_celery.py
